@@ -1,0 +1,2 @@
+All cancer datasets from TCGA can be obtianed in http://acgt.cs.tau.ac.il/multi_omic_benchmark/download.html.
+Rappoport, N. and R. Shamir (2018). "Multi-omic and multi-view clustering algorithms: review and cancer benchmark." NUCLEIC ACIDS RESEARCH 46 (20): 10546-10562.
