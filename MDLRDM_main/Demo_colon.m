@@ -2,9 +2,9 @@ clear
 clc
 close all
 addpath("Functions\")
-%x1 = csvread("Datasets\colon\exp");
-%x2 = csvread("Datasets\colon\methy");
-%x3 = csvread("Datasets\colon\mirna");
+x1 = csvread("Datasets\colon\colon_newExp.csv");
+x2 = csvread("Datasets\colon\colon_newMethy.csv");
+x3 = csvread("Datasets\colon\colon_newMirna.csv");
 for l = 1 : size(x1,2)
     x1(:,l) = x1(:,l)/norm(x1(:,l)); 
 end
@@ -26,6 +26,8 @@ alpha = 0.6;
 
 
 W = MDLRDM(X,lambda1,lambda2,k,alpha);
+[K1, K2, K12,K22] = Estimate_Number_of_Clusters_given_graph(W, [2:15]);
 
+group1 = SpectralClustering2(W,K1);
 
 
